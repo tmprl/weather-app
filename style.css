@@ -11,6 +11,7 @@
     --font-base:'Roboto', sans-serif;
     --background-color: #24273A;;
     --background-color-alter: #2A2C3F;
+    --border: 3px solid #C6A0F6;
     --color-base: #fff;
 }
 
@@ -29,19 +30,50 @@ body {
 }
 
 .cityInput {
-    border:none;
     outline:none;
     padding: 15px;
-    border-radius: 35px;
+    border-radius: 15px;
     font-size: 2rem;
     font-weight: bold;
     background-color: var(--background-color-alter);
     color: var(--color-base);
-    border: 3px solid #C6A0F6;
+    border: var(--border);
+    margin: 10px;
+    width: 400px;
 }
 
 .cityInput::placeholder {
-    color: var(--color-base);
-    font-style: italic;
-    opacity: 0
+    color: rgba(255, 255, 255, .5);
+    font-weight: 400;
+}
+
+.citySubmit {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 2rem;
+    background-color: #C6A0F6;
+    border-radius: 30px;
+    color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.citySubmit:hover {
+    background-color: #8D4FE4;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.weatherWrapper {
+    background: linear-gradient(135deg, #2E2F47, #3A2F55, #4C3780);
+    padding: 60px;
+    box-shadow: 0 8px 20px rgba(108, 92, 231, 0.25);
+    border-radius: 15px;
+    font-size: 2rem;
+
+}
+
+.cityName {
+    transform: translateY(-25px);
 }
